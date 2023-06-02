@@ -21,7 +21,7 @@ function App() {
       <div className='counter-title'>
         <h1>Counter</h1>
       </div>
-      <div className='container-principal'>
+      <div className='main-container'>
         <Counter numClicks={numClicks} />
         <Botton text='Click me' isBottonOfClick={true} handleClick={handlerClick} />
         <Botton text='Restart' isBottonOfClick={false} handleClick={handlerClickRestart} />
