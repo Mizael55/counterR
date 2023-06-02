@@ -1,29 +1,30 @@
 
 import './App.css';
 import React, { useState } from 'react';
-import Boton from './components/boton';
-import Contador from './components/contador';
+import Botton from './components/botton';
+import Counter from './components/Counter';
 
 function App() {
-  const [numClics, setNumClic] = useState(0);
+  const [numClicks, setNumClicks] = useState(0);
 
-  const manejarClic = () => {
-    setNumClic(numClics + 1);
-  }
+  // handler
+  const handlerClick = () => {
+    setNumClicks(numClicks + 1);
+  };
 
-  const manejarClicReiniciar = () => {
-    setNumClic(0);
+  const handlerClickRestart = () => {
+    setNumClicks(0);
   }
 
   return (
     <div className="App">
-      <div className='contador-title'>
-        <h1>Contador</h1>
+      <div className='counter-title'>
+        <h1>Counter</h1>
       </div>
-      <div className='contenedor-principal'>
-        <Contador numClicks={numClics} />
-        <Boton texto='Click me' esBotonDeClic={true} manejarClic={manejarClic} />
-        <Boton texto='Reiniciar' esBotonDeClic={false} manejarClic={manejarClicReiniciar} />
+      <div className='container-principal'>
+        <Counter numClicks={numClicks} />
+        <Botton text='Click me' isBottonOfClick={true} handleClick={handlerClick} />
+        <Botton text='Restart' isBottonOfClick={false} handleClick={handlerClickRestart} />
 
       </div>
       
